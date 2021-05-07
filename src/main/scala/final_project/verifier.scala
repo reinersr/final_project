@@ -17,7 +17,9 @@ object verifier{
 /* You can either use sc or spark */
 
     if(args.length != 2) {
+	  println("==================================")
       println("Usage: verifier graph_path matching_path")
+	  println("==================================")
       sys.exit(1)
     }
 
@@ -33,21 +35,29 @@ object verifier{
     val matched_edges = sc.textFile(args(1)).map(line_to_canonical_edge)
 
     if(matched_edges.distinct.count!= matched_edges.count){
-      println("The matched edges contains duplications of an edge.")
+      println("==================================")
+	  println("The matched edges contains duplications of an edge.")
+	  println("==================================")
       sys.exit(1)
     }
 
     if(matched_edges.intersection(graph_edges).count != matched_edges.count){
+	  println("==================================")
       println("The matched edges are not a subset of the input graph.")
+	  println("==================================")
       sys.exit(1)
     }
 
     val matched_graph = Graph.fromEdges[Int, Int](matched_edges,0, edgeStorageLevel = StorageLevel.MEMORY_AND_DISK, vertexStorageLevel = StorageLevel.MEMORY_AND_DISK)
     if(matched_graph.ops.degrees.aggregate(0)((x,v) => scala.math.max(x, v._2) , (x,y) => scala.math.max(x,y)) >= 2  ){
+	  println("==================================")
       println("The matched edges do not form a matching.")
+	  println("==================================")
       sys.exit(1)
     }
-
+    
+	println("==================================")
     println("The matched edges form a matching of size: "+matched_edges.count)
+	println("==================================")
   }
 }
