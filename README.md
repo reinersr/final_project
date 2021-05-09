@@ -7,7 +7,7 @@ For the final project, you are provided 6 CSV files, each containing an undirect
 |           File name           |        Number of edges       |  # of Matching  |  Run time | Machine   
 | ------------------------------| ---------------------------- | --------------- | --------- | --------- |                
 | com-orkut.ungraph.csv         | 117185083                    | 44988           | 6 h (34)  | CPU       |
-| twitter_original_edges.csv    | 63555749                     | 15855           | h h       | CPU       |
+| twitter_original_edges.csv    | 63555749                     | 15855           | 4 h       | CPU       |
 | soc-LiveJournal1.csv          | 42851237                     | 44010           | 6 h (39)  | CPU       |
 | soc-pokec-relationships.csv   | 22301964                     | 42714           | 6 h (40)  | CPU       |
 | musae_ENGB_edges.csv          | 35324                        | 1540            |  46       | CPU       |
@@ -40,10 +40,10 @@ A maximum matching M is said to be Maximum if for any other matching M', |M|≥ 
 
 So, once we have the maximal matching we can get the maximum matching through the augmenting paths
 
- -An augmenting path is a path whose endpoints are free and the edges on path alternate between unmatched and matched
- -We can increase the size of a matching by flipping an augmenting path
- -If there are no augmenting paths => the current matching is optimal meaning the maximum matching
- - If the shortest augmenting paths have length ≥2𝑘−1 => the current matching is at least (1−1/𝑘)⋅𝑂𝑃𝑇
+ - An augmenting path is a path whose endpoints are free and the edges on path alternate between unmatched and matched <br>
+ - We can increase the size of a matching by flipping an augmenting path <br>
+ - If there are no augmenting paths => the current matching is optimal meaning the maximum matching <br>
+ - If the shortest augmenting paths have length ≥2𝑘−1 => the current matching is at least (1−1/𝑘)⋅𝑂𝑃𝑇 <br>
 
   * Discussion about the advantages of your algorithm(s). For example, does it guarantee a constraint on the number of shuffling rounds (say `O(log log n)` rounds)? Does it give you an approximation guarantee on the quality of the matching? If your algorithm has such a guarantee, please provide proofs or scholarly references as to why they hold in your report.
 
