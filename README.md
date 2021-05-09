@@ -36,7 +36,7 @@ The algorithm terminates in O(log n) rounds with high probability.
 ## Augmenting Path
 A maximum matching M is said to be Maximum if for any other matching M', |M|≥ |M'|
 
-   If matching M is maximum -> M is maximal
+  <u> If matching M is maximum -> M is maximal </u>
 
 So, once we have the maximal matching we can get the maximum matching through the augmenting paths
 
@@ -46,7 +46,9 @@ So, once we have the maximal matching we can get the maximum matching through th
    2. The edges of P alternate between edges ∈ M and edges 6∈ M
   
   
-  A matching M is maximum iff it has no augmenting path
+  <u> A matching M is maximum iff it has no augmenting path </u>
+  
+  
 
 * A project report that includes the following:
 
