@@ -20,7 +20,6 @@ Your goal is to compute a matching as large as possible for each graph.
 ## Luby Algorithm
 
 Luby algorithm is used to get the Maximal Independent Set (MIS). By changing the vertices to edges we get the maximal matching of the graph.
-The algorithm terminates in O(log n) rounds with high probability.
 
 Consider the algorithm of this form for G = (V, E):
    1. I = ∅, G' = G <br>
@@ -31,8 +30,23 @@ Consider the algorithm of this form for G = (V, E):
       (d) Send message to neighbors of edge v and u that the edge has been added to the matching M <br>
       (e) Remove v and x and the neighbors of both from G'. <br>
 
+The algorithm terminates in O(log n) rounds with high probability.
+
 
 ## Augmenting Path
+A maximum matching M is said to be Maximum if for any other matching M', |M|≥ |M'|
+
+   If matching M is maximum -> M is maximal
+
+So, once we have the maximal matching we can get the maximum matching through the augmenting paths
+
+ Definitioon of Augmenting Path:
+ Given a graph, G = (V, E) and a matching M ⊆ E a path P is called an augmenting path for M if:
+   1. The two end points of P are unmatched by M
+   2. The edges of P alternate between edges ∈ M and edges 6∈ M
+  
+  
+  A matching M is maximum iff it has no augmenting path
 
 * A project report that includes the following:
 
