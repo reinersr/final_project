@@ -61,3 +61,5 @@ So, once we have the maximal matching we can get the maximum matching through th
 ## Randomization
 
 We ran 100 iterations of a randomization algorithm where the edges were randomized and were added to the output if neither of the nodes were already a member of the output set.The largest set was then taken. This took a long time to run and did not finish for the 4 largest graphs. In order to get a set we took the first 100,000 edges out of the set after it was randomized and ran the randomization algorithm on that subset. These returned a set and wither finished all 100 iterations of the algorithm or finished a smaller number. The number finished, if under 100, is reflected in parentheses in the table above. The algorithm runs in O(n^3).
+
+This algorithm is easily implemented and provides a good matching. The matching is not perfect and could be missing some nodes, but will run relatively quickly and without a large amount of computational power.
