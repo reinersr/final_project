@@ -25,7 +25,7 @@ The algorithm terminates in O(log n) rounds with high probability.
 Consider the algorithm of this form for G = (V, E):
    1. I = ∅, G' = G <br>
    2. While G' is not the empty graph <br> 
-      (a) Choose a random set of vertices S ⊆ V by selecting each vertex v independently with probability Pr(v). Suppose Pr(v) = 1/d<sub>v</sub> , where dv ≡ degree of v. <b>
+      (a) Choose a random set of vertices S ⊆ V by selecting each vertex v independently with probability Pr(v). Suppose Pr(v) = 1/d<sub>v</sub> , where dv ≡ degree of v. <br>
       (b) For every edge (u, v) ∈ E(G'') if both endpoints are in S, then remove the vertex of lower degree from S (break ties). Denote the set after this step as S''. <br> 
       (c) Remove S'' and Neighbor(S') and all adjacent edges from G0. <br>
       (d) I = I U S'' <br>
