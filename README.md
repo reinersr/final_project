@@ -45,9 +45,6 @@ So, once we have the maximal matching we can get the maximum matching through th
  - If there are no augmenting paths => the current matching is optimal meaning the maximum matching <br>
  - If the shortest augmenting paths have length ≥2𝑘−1 => the current matching is at least (1−1/𝑘)⋅𝑂𝑃𝑇 <br>
 
-  * Discussion about the advantages of your algorithm(s). For example, does it guarantee a constraint on the number of shuffling rounds (say `O(log log n)` rounds)? Does it give you an approximation guarantee on the quality of the matching? If your algorithm has such a guarantee, please provide proofs or scholarly references as to why they hold in your report.
-
-
 ## Randomization
 
 We ran 100 iterations of a randomization algorithm where the edges were randomized and were added to the output if neither of the nodes were already a member of the output set.The largest set was then taken. This took a long time to run and did not finish for the 4 largest graphs. In order to get a set we took the first 100,000 edges out of the set after it was randomized and ran the randomization algorithm on that subset. These returned a set and wither finished all 100 iterations of the algorithm or finished a smaller number. The number finished, if under 100, is reflected in parentheses in the table above. The algorithm runs in O(n^3).
