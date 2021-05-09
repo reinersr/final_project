@@ -37,7 +37,6 @@ def check(edge, out_edges):
 	# fout.close()
 
 def main():
-	# fin = open(sys.argv[0], "r")
 	fin = open(sys.argv[1], "r")
 	fout = open(sys.argv[2], 'w')
 	

@@ -6,12 +6,12 @@ For the final project, you are provided 6 CSV files, each containing an undirect
 
 |           File name           |        Number of edges       |  # of Matching  |  Run time | Machine   
 | ------------------------------| ---------------------------- | --------------- | --------- | --------- |                
-| com-orkut.ungraph.csv         | 117185083                    |                 |           |           |
-| twitter_original_edges.csv    | 63555749                     |                 |           |           |
-| soc-LiveJournal1.csv          | 42851237                     |                 |           |           |
-| soc-pokec-relationships.csv   | 22301964                     |                 |           |           |
-| musae_ENGB_edges.csv          | 35324                        | 1540            |  46       | CPU       |
-| log_normal_100.csv            | 2671                         | 49              |   6       | CPU       |
+| com-orkut.ungraph.csv         | 117185083                    |                 |  6 h (34) | CPU       |
+| twitter_original_edges.csv    | 63555749                     |                 |  4 h      | CPU       |
+| soc-LiveJournal1.csv          | 42851237                     |                 |  6 h (39) | CPU       |
+| soc-pokec-relationships.csv   | 22301964                     |                 |  6 h (40) | CPU       |
+| musae_ENGB_edges.csv          | 35324                        | 1540            |  46 s     | CPU       |
+| log_normal_100.csv            | 2671                         | 49              |   6 s     | CPU       |
 
 
 Your goal is to compute a matching as large as possible for each graph. 
@@ -42,5 +42,7 @@ Consider the algorithm of this form for G = (V, E):
   * Discussion about the advantages of your algorithm(s). For example, does it guarantee a constraint on the number of shuffling rounds (say `O(log log n)` rounds)? Does it give you an approximation guarantee on the quality of the matching? If your algorithm has such a guarantee, please provide proofs or scholarly references as to why they hold in your report.
 
 
+## Randomization
 
+We ran 100 iterations of a randomization algorithm where the edges were randomized and were added to the output if neither of the nodes were already a member of the output set.The largest set was then taken. This took a long time to run and did not finish for the 4 largest graphs. In order to get a set we took the first 100,000 edges out of the set after it was randomized and ran the randomization algorithm on that subset. These returned a set and wither finished all 100 iterations of the algorithm or finished a smaller number. The number finished, if under 100, is reflected in parentheses in the table above. The algorithm runs in O(n^3).
 
