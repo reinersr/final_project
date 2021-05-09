@@ -6,10 +6,10 @@ For the final project, you are provided 6 CSV files, each containing an undirect
 
 |           File name           |        Number of edges       |  # of Matching  |  Run time | Machine   
 | ------------------------------| ---------------------------- | --------------- | --------- | --------- |                
-| com-orkut.ungraph.csv         | 117185083                    |                 |           |           |
-| twitter_original_edges.csv    | 63555749                     |                 |           |           |
-| soc-LiveJournal1.csv          | 42851237                     |                 |           |           |
-| soc-pokec-relationships.csv   | 22301964                     |                 |           |           |
+| com-orkut.ungraph.csv         | 117185083                    | 44988           |           |           |
+| twitter_original_edges.csv    | 63555749                     | 15855           |           |           |
+| soc-LiveJournal1.csv          | 42851237                     | 44010           |           |           |
+| soc-pokec-relationships.csv   | 22301964                     | 42714           |           |           |
 | musae_ENGB_edges.csv          | 35324                        | 1540            |  46       | CPU       |
 | log_normal_100.csv            | 2671                         | 49              |   6       | CPU       |
 
