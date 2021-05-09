@@ -40,14 +40,10 @@ A maximum matching M is said to be Maximum if for any other matching M', |M|≥ 
 
 So, once we have the maximal matching we can get the maximum matching through the augmenting paths
 
- Definitioon of Augmenting Path:
- Given a graph, G = (V, E) and a matching M ⊆ E a path P is called an augmenting path for M if:
-   1. The two end points of P are unmatched by M
-   2. The edges of P alternate between edges ∈ M and edges 6∈ M
-
-
-  <u> A matching M is maximum iff it has no augmenting path </u>
-
+ -An augmenting path is a path whose endpoints are free and the edges on path alternate between unmatched and matched
+ -We can increase the size of a matching by flipping an augmenting path
+ -If there are no augmenting paths => the current matching is optimal meaning the maximum matching
+ - If the shortest augmenting paths have length ≥2𝑘−1 => the current matching is at least (1−1/𝑘)⋅𝑂𝑃𝑇
 
   * Discussion about the advantages of your algorithm(s). For example, does it guarantee a constraint on the number of shuffling rounds (say `O(log log n)` rounds)? Does it give you an approximation guarantee on the quality of the matching? If your algorithm has such a guarantee, please provide proofs or scholarly references as to why they hold in your report.
 
