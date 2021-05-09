@@ -16,9 +16,11 @@ For the final project, you are provided 6 CSV files, each containing an undirect
 
 Your goal is to compute a matching as large as possible for each graph. 
 
+
 ## Deliverables
 
 * A project report that includes the following:
+
 
   * An estimate of the amount of computation used for each test case. For example, "the program runs for 15 minutes on a 2x4 N1 core CPU in GCP." If you happen to be executing mulitple algorithms on a test case, report the total running time.
   * Description(s) of your approach(es) for obtaining the matchings. It is possible to use different approaches for different cases. Please describe each of them as well as your general strategy if you were to receive a new test case.
