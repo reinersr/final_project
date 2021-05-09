@@ -17,7 +17,13 @@ For the final project, you are provided 6 CSV files, each containing an undirect
 Your goal is to compute a matching as large as possible for each graph. 
 
 
-## Deliverables
+## Luby Algorithm
+
+Luby algorithm is used to get the Maximal Independent Set (MIS). By changing the vertices to edges we get the maximal matching of the graph.
+The running time is O(logn)
+
+
+## Augmenting Path
 
 * A project report that includes the following:
 
